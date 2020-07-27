@@ -19,9 +19,9 @@ import {
   TouchableHighlight,
   Modal,
   ActivityIndicator,
+  FlatList
 } from 'react-native';
 
-import ListView from "deprecated-react-native-listview";
 import PropTypes from 'prop-types';
 
 const TOUCHABLE_ELEMENTS = [
@@ -283,7 +283,7 @@ export default class ModalDropdown extends Component {
   _renderDropdown() {
     const {scrollEnabled, renderSeparator, showsVerticalScrollIndicator, keyboardShouldPersistTaps} = this.props;
     return (
-      <ListView scrollEnabled={scrollEnabled}
+      <FlatList scrollEnabled={scrollEnabled}
                 style={styles.list}
                 dataSource={this._dataSource}
                 renderRow={this._renderRow}
